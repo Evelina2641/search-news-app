@@ -1,0 +1,51 @@
+.wrapper_loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    .loading_spinner {
+        width: 5rem;
+        height: 5rem;
+        display: inline-block;
+        border: 3px solid #28A745;
+        border-radius: 50%;
+        border-top-color: white;
+        margin-bottom: 1rem;
+        animation: 1s spin infinite ease-in-out;
+    }
+    .loading_dots > div{
+        width: 1rem;
+        height: 1rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        animation: 1.5s bounce infinite ease-in-out both;
+    }
+    .loading_dots > .dot1 {
+        animation-delay: -0.30s;
+    }
+    .loading_dots > .dot2 {
+        animation-delay: -0.15s;
+    }
+    .loading_dots > .dot3 {
+        background-color: #28A745;
+    }
+    .dot1, .dot2 {
+        margin-right: 5px;
+    }
+}
+// animations
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
