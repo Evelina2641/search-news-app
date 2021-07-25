@@ -34,7 +34,6 @@ function App() {
         let data = await response.json();
         let newArray = data.articles.slice(0, 9);
         setData(newArray);
-        setKeywords('');
         setIsLoaded(true);
       } catch (e) {
         return e;
